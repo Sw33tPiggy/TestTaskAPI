@@ -37,7 +37,7 @@ namespace APITest.Controllers {
             }
             User user = null;
             if(userCredential.email != null){
-                user = await _userService.UserByEmailAsync(userCredential.email);
+                user = await _userService.FindUserByEmailAsync(userCredential.email);
             }
             if(user == null){
                 return Unauthorized("wrong email");
