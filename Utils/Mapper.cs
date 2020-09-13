@@ -16,5 +16,12 @@ namespace APITest.Utils {
                 Name = user.GivenName + " " + user.Surname
             };
         }
+
+        public static AccessTokenResource AccessTokenResourceToAccessToken(AccessToken accessToken){
+            return new AccessTokenResource{
+                AccessToken = accessToken.Token,
+                Expiration = accessToken.Expiration
+            };
+        }
     }
 }

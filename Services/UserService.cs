@@ -16,8 +16,13 @@ namespace APITest.Services{
             return await _userRepository.ListAsync();
         }
 
-        public async Task<User> UserByEmailAsync(string email){
-            return await _userRepository.UserByEmailAsync(email);
+        public async Task<User> FindUserByEmailAsync(string email){
+            return await _userRepository.FindUserByEmailAsync(email);
+        }
+
+        public async Task<User> FindUserByPhoneAsync(string phone)
+        {
+            return await _userRepository.FindUserByPhoneAsync(phone);
         }
     }
 }

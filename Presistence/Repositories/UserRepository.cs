@@ -15,8 +15,13 @@ namespace APITest.Presistence.Repositories {
             return await _context.Users.ToListAsync();
         }
 
-        public async Task<User> UserByEmailAsync(string email){
+        public async Task<User> FindUserByEmailAsync(string email){
             return await _context.Users.FirstOrDefaultAsync(user => user.Email == email);
+        }
+
+        public async Task<User> FindUserByPhoneAsync(string phone)
+        {
+             return await _context.Users.FirstOrDefaultAsync(user => user.Phone == phone);
         }
     }
 }
