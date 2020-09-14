@@ -2,6 +2,7 @@ using System.Threading.Tasks;
 using APITest.Utils;
 using APITest.Domain.Services;
 using APITest.Services;
+using APITest.Domain.Models.Responses;
 
 namespace APITest.Services{
     public class AuthenticationService : IAuthenticationService

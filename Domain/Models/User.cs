@@ -17,6 +17,8 @@ namespace APITest.Domain.Models{
         public string Phone { get; set; }
 
         public string PasswordHash { get; set; }
+
+        public IList<FileRecord> Files {get; set;} = new List<FileRecord>();
 }
 
 }

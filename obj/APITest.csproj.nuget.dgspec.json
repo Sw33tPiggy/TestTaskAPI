@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\APITest\\APITest.csproj": {}
+    "C:\\Users\\Fallout-10\\Desktop\\TestTaskApi\\TestTaskAPI\\APITest.csproj": {}
   },
   "projects": {
-    "D:\\APITest\\APITest.csproj": {
+    "C:\\Users\\Fallout-10\\Desktop\\TestTaskApi\\TestTaskAPI\\APITest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\APITest\\APITest.csproj",
+        "projectUniqueName": "C:\\Users\\Fallout-10\\Desktop\\TestTaskApi\\TestTaskAPI\\APITest.csproj",
         "projectName": "APITest",
-        "projectPath": "D:\\APITest\\APITest.csproj",
-        "packagesPath": "C:\\Users\\SweetPiggy\\.nuget\\packages\\",
-        "outputPath": "D:\\APITest\\obj\\",
+        "projectPath": "C:\\Users\\Fallout-10\\Desktop\\TestTaskApi\\TestTaskAPI\\APITest.csproj",
+        "packagesPath": "C:\\Users\\Fallout-10\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Fallout-10\\Desktop\\TestTaskApi\\TestTaskAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\SweetPiggy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Fallout-10\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -38,6 +38,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.8, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.8, )"
@@ -49,6 +53,14 @@
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
               "version": "[3.1.8, )"
+            },
+            "Microsoft.IdentityModel": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.7.1, )"
             }
           },
           "imports": [
