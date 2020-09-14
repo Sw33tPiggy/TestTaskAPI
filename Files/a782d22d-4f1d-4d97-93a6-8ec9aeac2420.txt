@@ -1,0 +1,155 @@
+Last login: Mon Mar 18 11:32:03 on ttys000
+MacBook-Pro-1:~ sweetpiggy$ cd "/Users/sweetpiggy/Desktop/SUST/Semestr 2/Digital Logic CS207/Labs/lab5"
+MacBook-Pro-1:lab5 sweetpiggy$ ls
+test.v		test_tb.v
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog -o test_tb.out test.v test_tb.v
+test.v:3: syntax error
+Assertion failed: (current_task == 0), function VLparse, file parse.y, line 2010.
+sh: line 1: 16548 Done                    /opt/local/lib/ivl/ivlpp -L -F"/var/folders/m0/96xjb42966gbj8j_6km2mcmm0000gp/T//ivrlg210934bae" -f"/var/folders/m0/96xjb42966gbj8j_6km2mcmm0000gp/T//ivrlg10934bae" -p"/var/folders/m0/96xjb42966gbj8j_6km2mcmm0000gp/T//ivrli10934bae"
+     16549 Abort trap: 6           | /opt/local/lib/ivl/ivl -C"/var/folders/m0/96xjb42966gbj8j_6km2mcmm0000gp/T//ivrlh10934bae" -C"/opt/local/lib/ivl/vvp.conf" -- -
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog -o test_tb.out test.v test_tb.v
+test.v:3: syntax error
+Assertion failed: (current_task == 0), function VLparse, file parse.y, line 2010.
+sh: line 1: 16598 Done                    /opt/local/lib/ivl/ivlpp -L -F"/var/folders/m0/96xjb42966gbj8j_6km2mcmm0000gp/T//ivrlg210a01e4c" -f"/var/folders/m0/96xjb42966gbj8j_6km2mcmm0000gp/T//ivrlg10a01e4c" -p"/var/folders/m0/96xjb42966gbj8j_6km2mcmm0000gp/T//ivrli10a01e4c"
+     16599 Abort trap: 6           | /opt/local/lib/ivl/ivl -C"/var/folders/m0/96xjb42966gbj8j_6km2mcmm0000gp/T//ivrlh10a01e4c" -C"/opt/local/lib/ivl/vvp.conf" -- -
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog -o test_tb.out test.v test_tb.v
+test.v:3: syntax error
+Assertion failed: (current_task == 0), function VLparse, file parse.y, line 2010.
+sh: line 1: 16618 Done                    /opt/local/lib/ivl/ivlpp -L -F"/var/folders/m0/96xjb42966gbj8j_6km2mcmm0000gp/T//ivrlg210a53f58" -f"/var/folders/m0/96xjb42966gbj8j_6km2mcmm0000gp/T//ivrlg10a53f58" -p"/var/folders/m0/96xjb42966gbj8j_6km2mcmm0000gp/T//ivrli10a53f58"
+     16619 Abort trap: 6           | /opt/local/lib/ivl/ivl -C"/var/folders/m0/96xjb42966gbj8j_6km2mcmm0000gp/T//ivrlh10a53f58" -C"/opt/local/lib/ivl/vvp.conf" -- -
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog -o test_tb.out test.v test_tb.v
+test.v:1: error: task declarations must be contained within a module.
+test.v:2: syntax error
+Assertion failed: (current_task == 0), function VLparse, file parse.y, line 2010.
+sh: line 1: 16683 Done                    /opt/local/lib/ivl/ivlpp -L -F"/var/folders/m0/96xjb42966gbj8j_6km2mcmm0000gp/T//ivrlg210b5eabf" -f"/var/folders/m0/96xjb42966gbj8j_6km2mcmm0000gp/T//ivrlg10b5eabf" -p"/var/folders/m0/96xjb42966gbj8j_6km2mcmm0000gp/T//ivrli10b5eabf"
+     16684 Abort trap: 6           | /opt/local/lib/ivl/ivl -C"/var/folders/m0/96xjb42966gbj8j_6km2mcmm0000gp/T//ivrlh10b5eabf" -C"/opt/local/lib/ivl/vvp.conf" -- -
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog -o test_tb.out test.v test_tb.v
+test.v:6: syntax error
+test.v:6: error: malformed statement
+test.v:7: syntax error
+test.v:7: error: malformed statement
+test_tb.v:4: syntax error
+test_tb.v:5: error: invalid module item.
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog -o test_tb.out test.v test_tb.v
+test.v:6: syntax error
+test.v:6: error: malformed statement
+test.v:7: syntax error
+test.v:7: error: malformed statement
+test.v:8: syntax error
+test.v:8: error: malformed statement
+test_tb.v:4: syntax error
+test_tb.v:5: error: invalid module item.
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog -o test_tb.out test.v test_tb.v
+test.v:6: syntax error
+test.v:6: error: malformed statement
+test.v:7: syntax error
+test.v:7: error: malformed statement
+test_tb.v:4: syntax error
+test_tb.v:5: error: invalid module item.
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog -o test_tb.out test.v test_tb.v
+test.v:7: syntax error
+test.v:7: error: malformed statement
+test.v:8: syntax error
+test.v:8: error: malformed statement
+test.v:2: error: Task body with multiple statements requires SystemVerilog.
+test.v:1: error: Task body with multiple statements requres SystemVerilog.
+test_tb.v:4: syntax error
+test_tb.v:5: error: invalid module item.
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog -o test_tb.out test.v test_tb.v
+test.v:5: syntax error
+test.v:5: error: malformed statement
+test.v:8: syntax error
+test.v:8: error: malformed statement
+test.v:9: syntax error
+test.v:9: error: malformed statement
+test.v:2: error: Task body with multiple statements requires SystemVerilog.
+test.v:1: error: Task body with multiple statements requres SystemVerilog.
+test_tb.v:4: syntax error
+test_tb.v:5: error: invalid module item.
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog -o test_tb.out test.v test_tb.v
+test.v:7: syntax error
+test.v:7: error: malformed statement
+test.v:8: syntax error
+test.v:8: error: malformed statement
+test_tb.v:4: syntax error
+test_tb.v:5: error: invalid module item.
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog -o test_tb.out test.v test_tb.v
+test_tb.v:4: syntax error
+test_tb.v:5: error: invalid module item.
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog -o test_tb.out test.v test_tb.v
+test_tb.v:4: syntax error
+test_tb.v:5: error: invalid module item.
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog -o test_tb.out test.v test_tb.v
+test_tb.v:4: syntax error
+test_tb.v:4: error: invalid module item.
+test_tb.v:8: syntax error
+test_tb.v:9: error: malformed statement
+test_tb.v:21: syntax error
+I give up.
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog -o test_tb.out test.v test_tb.v
+test_tb.v:4: syntax error
+test_tb.v:4: error: invalid module item.
+test_tb.v:8: syntax error
+test_tb.v:9: error: malformed statement
+test_tb.v:21: syntax error
+I give up.
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog -o test_tb.out test.v test_tb.v
+test_tb.v:4: syntax error
+test_tb.v:4: error: invalid module item.
+test_tb.v:8: syntax error
+test_tb.v:9: error: malformed statement
+test_tb.v:21: syntax error
+I give up.
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog -o test_tb.out test.v test_tb.v
+test_tb.v:4: syntax error
+test_tb.v:4: error: invalid module item.
+test_tb.v:8: syntax error
+test_tb.v:9: error: malformed statement
+test_tb.v:21: syntax error
+I give up.
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog -o test_tb.out test.v test_tb.v
+test_tb.v:4: syntax error
+test_tb.v:4: error: invalid module item.
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog -o test_tb.out test.v test_tb.v
+test_tb.v:4: syntax error
+test_tb.v:4: error: invalid module item.
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog -o test_tb.out test.v test_tb.v
+test_tb.v:4: syntax error
+test_tb.v:4: error: invalid module item.
+test_tb.v:5: error: Module definition simple_task cannot nest into module test_tb.
+test_tb.v:23: syntax error
+I give up.
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog -o test_tb.out test.v test_tb.v
+test_tb.v:4: syntax error
+test_tb.v:4: error: invalid module item.
+test_tb.v:5: error: Module definition simple_task cannot nest into module test_tb.
+test_tb.v:23: syntax error
+I give up.
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog -o test_tb.out test.v test_tb.v
+test_tb.v:1: syntax error
+I give up.
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog -o test_tb.out test.v test_tb.v
+test_tb.v:11: error: Enable of unknown task ``half_adder''.
+test_tb.v:13: error: Enable of unknown task ``half_adder''.
+test_tb.v:15: error: Enable of unknown task ``half_adder''.
+test_tb.v:17: error: Enable of unknown task ``half_adder''.
+4 error(s) during elaboration.
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog -o test_tb.out test.v test_tb.v
+test_tb.v:5: syntax error
+test_tb.v:5: error: invalid module item.
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog -o test_tb.out test.v test_tb.v
+test_tb.v:5: syntax error
+test_tb.v:5: error: invalid module item.
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog -o test_tb.out test.v test_tb.v
+test_tb.v:5: syntax error
+test_tb.v:5: error: invalid module item.
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog -o test_tb.out test.v test_tb.v
+test_tb.v:5: syntax error
+test_tb.v:5: error: invalid module item.
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog -o test_tb.out test.v test_tb.v
+test_tb.v:5: syntax error
+test_tb.v:5: error: invalid module item.
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog -o test_tb.out test.v test_tb.v
+test_tb.v:1: syntax error
+I give up.
+MacBook-Pro-1:lab5 sweetpiggy$ iverilog task_calling.v simple_task.v

@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\Fallout-10\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Fallout-10\\.nuget\\packages"
+      "/Users/sweetpiggy/.dotnet/store/|arch|/|tfm|",
+      "/Users/sweetpiggy/.nuget/packages"
     ]
   }
 }

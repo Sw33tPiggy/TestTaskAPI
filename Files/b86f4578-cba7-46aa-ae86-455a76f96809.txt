@@ -1,2 +1,0 @@
-https://www.codeproject.com/Articles/25261/A-WCF-WPF-Chat-Application
-https://github.com/andead/wcf-chat/tree/master/Source/Server

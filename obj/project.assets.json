@@ -4256,26 +4256,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Fallout-10\\.nuget\\packages\\": {}
+    "/Users/sweetpiggy/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Fallout-10\\Desktop\\TestTaskApi\\TestTaskAPI\\APITest.csproj",
+      "projectUniqueName": "/Users/sweetpiggy/Desktop/TestTaskApi/TestTaskAPI/APITest.csproj",
       "projectName": "APITest",
-      "projectPath": "C:\\Users\\Fallout-10\\Desktop\\TestTaskApi\\TestTaskAPI\\APITest.csproj",
-      "packagesPath": "C:\\Users\\Fallout-10\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Fallout-10\\Desktop\\TestTaskApi\\TestTaskAPI\\obj\\",
+      "projectPath": "/Users/sweetpiggy/Desktop/TestTaskApi/TestTaskAPI/APITest.csproj",
+      "packagesPath": "/Users/sweetpiggy/.nuget/packages/",
+      "outputPath": "/Users/sweetpiggy/Desktop/TestTaskApi/TestTaskAPI/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Fallout-10\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/sweetpiggy/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4335,7 +4333,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -4344,7 +4342,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Пакет \"Microsoft.IdentityModel 7.0.0\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\", а не целевой платформы проекта \".NETCoreApp,Version=v3.1\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "message": "Package 'Microsoft.IdentityModel 7.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.IdentityModel",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"

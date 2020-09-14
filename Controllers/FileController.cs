@@ -17,12 +17,10 @@ namespace APITest.Controllers
     [ApiController]
     public class FileController : Controller
     {
-        private readonly IUserService _userService;
         private readonly IFileService _fileService;
         private readonly IWebHostEnvironment _env;
-        public FileController(IUserService userService, IFileService fileService, IWebHostEnvironment env)
+        public FileController(IFileService fileService, IWebHostEnvironment env)
         {
-            _userService = userService;
             _fileService = fileService;
             _env = env;
         }
@@ -57,10 +55,8 @@ namespace APITest.Controllers
             };
             Response.Headers.Add("Content-Disposition", cd.ToString());
 
-            //get physical path
             var path = _env.ContentRootPath;
             var fileReadPath = Path.Combine(path, "Files", fileRecord.Id.ToString() + fileRecord.Type);
-            Console.WriteLine(fileReadPath);
             var file = System.IO.File.OpenRead(fileReadPath);
             return File(file, "application/force-download", fileRecord.Name); 
         }
