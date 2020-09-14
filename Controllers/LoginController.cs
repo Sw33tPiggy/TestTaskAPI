@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using APITest.Domain.Services;
 using APITest.Resources;
 using APITest.Utils;
+using APITest.Domain.Models.Responses;
 
 namespace APITest.Controllers
 {

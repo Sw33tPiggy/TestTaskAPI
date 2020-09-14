@@ -4,8 +4,7 @@ namespace APITest.Domain.Models.Responses
         
        
         public FileAddResponse(bool success, string message) : base(success, message) {
-            Success = success;
-            Message = message;
+       
         }
     }
 }

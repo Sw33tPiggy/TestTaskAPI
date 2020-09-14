@@ -5,8 +5,6 @@ namespace APITest.Domain.Models.Responses
        
         public TokenResponse(bool success, string message, AccessToken token) : base(success, message) {
             Token = token;
-            Success = success;
-            Message = message;
         }
     }
 }

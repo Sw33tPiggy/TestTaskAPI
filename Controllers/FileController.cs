@@ -10,6 +10,7 @@ using APITest.Utils;
 using System;
 using System.Security.Claims;
 using System.IO;
+using System.Collections.Generic;
 
 namespace APITest.Controllers
 {
@@ -17,60 +18,65 @@ namespace APITest.Controllers
     public class FileController : Controller
     {
         private readonly IUserService _userService;
+        private readonly IFileService _fileService;
         private readonly IWebHostEnvironment _env;
-        public FileController(IUserService userService, IWebHostEnvironment env)
+        public FileController(IUserService userService, IFileService fileService, IWebHostEnvironment env)
         {
             _userService = userService;
+            _fileService = fileService;
             _env = env;
         }
 
         [Route("/api/myfiles")]
         [HttpGet]
         [Authorize]
-        public async Task<IActionResult> GetMyFiles(){
-            return Ok("kok");
+        public async Task<IEnumerable<FileResource>> GetMyFiles(){
+            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var files = await _fileService.GetFiles(userId);
+            var resources = Mapper.FileRecordsToFileResources(files);
+            return resources;
         }
 
         [Route("/api/files/download")]
         [HttpGet]
         [Authorize]
-        public async Task<IActionResult> DownloadFile(/*[FromBody] int Id*/){
+        public async Task<IActionResult> DownloadFile([FromBody] FileResource fileResource){
             
+            Guid Id = fileResource.Id;
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            var user = await _userService.FindUserByEmailAsync(userId);
-            var files = user.Files;
+            var response = await _fileService.GetFile(userId, Id);
+            if(!response.Success){
+                return BadRequest(response.Message);
+            }
             
-            return Ok("kok");
+            var fileRecord = response.FileRecord;
+            System.Net.Mime.ContentDisposition cd = new System.Net.Mime.ContentDisposition
+            {
+                FileName = fileRecord.Name,
+                Inline = false
+            };
+            Response.Headers.Add("Content-Disposition", cd.ToString());
+
+            //get physical path
+            var path = _env.ContentRootPath;
+            var fileReadPath = Path.Combine(path, "Files", fileRecord.Id.ToString() + fileRecord.Type);
+            Console.WriteLine(fileReadPath);
+            var file = System.IO.File.OpenRead(fileReadPath);
+            return File(file, "application/force-download", fileRecord.Name); 
         }
 
         [Route("/api/files/upload")]
         [HttpPost]
         [Authorize]
         public async Task<IActionResult> UploadFile(){
-            var file = Request.Form.Files;
+            var files = Request.Form.Files;
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            var user = await _userService.FindUserByEmailAsync(userId);
-            FileRecord fileRecord  = new FileRecord();
+            var response = await _fileService.AddFiles(userId, files[0]);
 
-            var filePath = _env.ContentRootPath;
-            var docName = Path.GetFileName(file.FileName);
-            var fileType = Path.GetExtension(file.FileName);
-            if (file != null && file.Length > 0){
-                fileRecord.Id = Guid.NewGuid();
-                fileRecord.Name = docName;
-                fileRecord.Type = fileType;
-                fileRecord.Path = Path.Combine(filePath, "Files", fileRecord.Id.ToString() + fileRecord.Type);
-                fileRecord.Owner = user;
-                fileRecord.OwnerID = user.Id;
-                using (var stream = new FileStream(fileRecord.Path, FileMode.Create)){
-                    await file.CopyToAsync(stream);
-                }
-
-                //_context.Add(fileDetail);
-            } else {
-                return BadRequest();
+            if(!response.Success){
+                return BadRequest(response.Message);
             }
-            return Ok("kok");
+            return Ok();
         }
     }
 }

@@ -41,10 +41,12 @@ namespace APITest
 
             
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IFileRepository, FileRepository>();
 
             services.AddSingleton<ITokenHandler, APITest.Services.TokenHandler>();
 
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IFileService, FileService>();
             services.AddScoped<IAuthenticationService, AuthenticationService>();
 
             services.Configure<TokenOptions>(Configuration.GetSection("TokenOptions"));

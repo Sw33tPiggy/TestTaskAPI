@@ -23,5 +23,17 @@ namespace APITest.Utils {
                 Expiration = accessToken.Expiration
             };
         }
+
+        public static FileResource FileRecordToFileResource(FileRecord fileRecord){
+            return new FileResource{
+                Id = fileRecord.Id,
+                Name = fileRecord.Name + " " + fileRecord.Type
+            };
+        }
+
+        public static IEnumerable<FileResource> FileRecordsToFileResources(IEnumerable<FileRecord> fileRecords){
+            IEnumerable<FileResource> fileResources = fileRecords.Select( i => FileRecordToFileResource(i));
+            return fileResources;
+        }
     }
 }
